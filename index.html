@@ -15,8 +15,38 @@
             return a*b;
         }
         function divide(a,b) {
+           
+            if (b===0) {
+                console.log('math error'); 
+            }
             return a/b;
         }
+        function calculator() {
+            var num1=parseInt(prompt("Enter first digit:"))
+            var num2=parseInt(prompt("Enter second digit:"))
+            var operator = prompt("Enter any operators:+,-,*,/:")
+        
+        var result;
+        switch (operator) {
+            case "+":
+                result=add(num1,num2)
+                break;
+                case "-":
+                result=sub(num1,num2)
+                break;
+                case "*":
+                result=add(num1,num2)
+                break;
+                case "/":
+                result=divide(num1,num2)
+                break;
+            default:
+                alert("Invalid operator")
+                break;
+        }
+        alert("The result is "+result)
+    }
+        calculator();
     </script>
 </head>
 <body>
